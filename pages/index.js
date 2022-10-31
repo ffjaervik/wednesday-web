@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import bg1 from '../public/bg1.png'
-import bg2 from '../public/bg2.png'
+import bg1 from '../public/bg1.jpg'
+import bg2 from '../public/bg2.jpg'
 
 export default function Home() {
 	return (
@@ -12,52 +12,53 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<body>
-				<div className='bg-cover bg-center bg-no-repeat h-screen w-screen bg-green-500 -z-20 relative overflow-hidden flex items-center justify-center'>
-					<Image
-						src={bg1}
-						layout='fill'
-						object-fit='cover'
-						className='absolute h-full w-full -z-10'
-						alt='/'
-					/>
-					<div className='px-8 py-4 absolute bg-white top-36 border-8 border-[#E5E5E5] bg-opacity-50  '>
-						<h1>Wednesday</h1>
-					</div>
-					<div className='px-8 py-4 absolute top-80 bg-[#D9D9D9] rounded-full '>
-						<h2>Sign up</h2>
-					</div>
+			<div className='bg-cover bg-center bg-no-repeat h-screen w-screen -z-20 relative overflow-hidden flex items-center justify-center'>
+				<Image
+					src={bg1}
+					layout='fill'
+					object-fit='cover'
+					className='absolute h-full w-full -z-10'
+					alt='/'
+					placeholder='blur'
+          
+				/>
+				<div className='px-8 py-4 absolute bg-white top-36 border-8 border-[#E5E5E5] bg-opacity-50  '>
+					<h1>Wednesday</h1>
 				</div>
-				<div className='bg-cover bg-center bg-no-repeat h-screen w-screen bg-red-500 leading-9 -z-20 relative overflow-hidden grid grid-cols-6 grid-rows-6 '>
-					<Image
-						src={bg2}
-						layout='fill'
-						object-fit='cover'
-						className='absolute h-full w-full -z-10'
-						alt='/'
-					/>
-					<div className='col-start-2 row-start-2 col-span-4  '>
-						<h3 className=' text-white leading-loose '>
-							Go on an unique dates with your partner. <br /> It is already
-							booked. <br /> on Wednesday.
-						</h3>
-					</div>
-					<div className='col-start-3 row-start-4 col-span-4 '>
-						<h3 className='leading-loose'>
-							Join the waiting list for <br /> exclusive access.
-						</h3>
-					</div>
-					<div className='col-start-3 row-start-5'>
-						<form
-							action='https://formsubmit.co/fabianfjaervik@gmail.com'
-							method='POST'
-						>
-								<input type='text' id="name" placeholder="name"/>
-                <input type='email' id="email" placeholder="email"/>
-						</form>
-					</div>
+				<div className='px-8 py-4 absolute top-80 bg-[#D9D9D9] rounded-full '>
+					<h2>Sign up</h2>
 				</div>
-			</body>
+			</div>
+			<div className='bg-cover bg-center bg-no-repeat h-screen w-screen -z-20 relative overflow-hidden grid grid-cols-9 grid-rows-9 '>
+				<Image
+					src={bg2}
+					layout='fill'
+					object-fit='cover'
+					className='absolute h-full w-full -z-10'
+					alt='/'
+					placeholder='blur'
+				/>
+				<div className='col-start-2 row-start-2 col-span-4  '>
+					<h3 className=' text-white leading-loose '>
+						Go on an unique dates with your partner. <br /> It is already
+						booked. <br /> on Wednesday.
+					</h3>
+				</div>
+				<div className='col-start-4 row-start-5 col-span-4 '>
+					<h3 className='leading-loose'>
+						Join the waiting list for <br /> exclusive access.
+					</h3>
+				</div>
+				<div className='col-start-3 row-start-5'>
+					<form
+						action='https://formsubmit.co/fabianfjaervik@gmail.com'
+						method='POST'
+					>
+						<input type='text' id='name' placeholder='Name' />
+						<input type='number' id='phone-number' placeholder='Phone Nr.:' />
+					</form>
+				</div>
+			</div>
 		</div>
 	)
 }
